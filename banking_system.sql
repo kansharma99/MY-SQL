@@ -8,6 +8,9 @@ account_type varchar(50) check( account_type in ('Savings','Current')) not null,
 balance float8 default 0.0 check(balance >=0),
 pin_hash varchar(50) not null);
 
+alter  table accounts modify column pin_hash varchar(70)not null;
+ALTER TABLE ACCOUNTS ADD COLUMN phone int not null;
+alter table accounts modify column phone varchar(15) not null;
 -- create transaction table 
 create table transactions(
 transaction_id int primary key auto_increment,
@@ -21,5 +24,8 @@ show tables;
 select * from transactions;
 select * from accounts;
 
+delete from accounts where account_number =1;
+delete from accounts where account_number =2;
+delete from accounts where account_number=1000565331;
 
 
