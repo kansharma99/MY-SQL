@@ -1,2 +1,3 @@
 # MY-SQL
-Banking system
+Banking Project
+
